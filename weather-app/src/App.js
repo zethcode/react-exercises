@@ -25,6 +25,14 @@ function App() {
         setWeatherData(result)
         console.log('result', result)
     }))
+
+    // await (!Array.isArray(lat) && !Array.isArray(long) && weatherData != 'undefined') 
+    // && (fetch(`${process.env.REACT_APP_GEO_URL}/reverse?lat=${lat}&lon=${long}&APPID=${process.env.REACT_APP_API_KEY}`)
+    // .then(res => res.json())
+    // .then(result => {
+    //   setWeatherData([weatherData, result])
+    //   console.log('widir', weatherData)
+    // }))
   }
 
   useEffect(() => {
@@ -34,9 +42,12 @@ function App() {
 
   return (
     <div className="App">
-      {(typeof weatherData.main != 'undefined') &&
-        <Weather weatherData={weatherData} />
+      <div className="App-header">
+      {(typeof weatherData != 'undefined' && typeof weatherData.main != 'undefined')
+        ? <Weather weatherData={weatherData} />
+        : <h1 className="header">Please allow access to your browser's location to gather data.</h1>
       }
+      </div>
     </div>
   );
 }

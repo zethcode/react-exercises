@@ -1,4 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+
+.main {
+  width: 700px !important;
+  border-radius: 20px;
+  background-color: #01579b;
+}
+
+.header {
+  background-color: #4c5d75;
+  color: whitesmoke !important;
+  padding: 10px;
+  font-size: 28px;
+  font-family: "Recursive", sans-serif;
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.card-body {
+  text-align: left;
+  padding: 10px;
+  background-color: #7187a6;
+  color: whitesmoke !important;
+}
+
+.day {
+  padding: 15px;
+  color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .button {
   width: 35px;
   height: 35px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
